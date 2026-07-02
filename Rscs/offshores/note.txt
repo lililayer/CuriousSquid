@@ -1,0 +1,2 @@
+retrieve datas on offshoreleaks.icij.org :
+https://offshoreleaks-data.icij.org/offshoreleaks/csv/full-oldb.LATEST.zip
