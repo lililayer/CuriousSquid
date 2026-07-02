@@ -7,9 +7,9 @@ Discover the great french fortunes hidden behind the smaller ones
 
 ## FUNCTIONALITY
 * StartingTentacle.py downloads the mapping data available for the given company via pappers.fr. It sorts the data and stores it in /Outputs in three files:
-  - “SOA_<session>.txt” contains the entire dataset,
-  - "SOE_<session>.txt" contains the list of related companies,
-  - “SOP_<session>.txt” contains the list of related individuals.
+  - “SOA_session.txt” contains the entire dataset,
+  - "SOE_session.txt" contains the list of related companies,
+  - “SOP_session.txt” contains the list of related individuals.
 
 * Several tools are then available: 
   - View the raw data
