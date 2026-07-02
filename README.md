@@ -13,6 +13,6 @@ Functionality:
   - View the raw data
   - Search for keywords in the data
   - Check if CuriousSquid finds any related individuals listed on the Forbes website
-  - check if CuriousSquid finds related companies listed on the Fortune website
-  - search for data included in the BODACC database
-  - check if certain companies appear in the offshore money-laundering company leaks
+  - Check if CuriousSquid finds related companies listed on the Fortune website
+  - Search for data included in the BODACC database
+  - Check if certain companies appear in the offshore money-laundering company leaks
