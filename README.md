@@ -17,7 +17,7 @@ Discover the great french fortunes hidden behind the smaller ones
   - Check if CuriousSquid finds any related individuals listed on the Forbes website
   - Check if CuriousSquid finds related companies listed on the Fortune website
   - Search for data included in the BODACC database
-  - Check if certain companies appear in the offshore money-laundering company leaks
+  - Check if certain companies appear in offshore money-laundering company leaks
 
 ## USAGE
 ```bash
