@@ -30,7 +30,7 @@ while [[ $passed2 == 0 ]]; do
 done
 
 echo "downloading offshore leaks..."
-wget https://offshoreleaks-data.icij.org/offshoreleaks/csv/full-oldb.LATEST.zip -o ./Rscs/offshores/data.zip
+wget https://offshoreleaks-data.icij.org/offshoreleaks/csv/full-oldb.LATEST.zip -O ./Rscs/offshores/data.zip
 echo "extracting data..."
 unzip -d ./Rscs/offshores/ ./Rscs/offshores/data.zip
 echo "done"
