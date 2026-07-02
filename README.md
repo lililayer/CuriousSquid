@@ -5,6 +5,16 @@ This framework is a work-in-progress, please contact me if you see anything to i
 
 Discover the great french fortunes hidden behind the smaller ones
 
+## INITIALISATION
+Offshores filter algorythme require public offshores leaks. You can download them on the official website : 
+https://offshoreleaks.icij.org/pages/database
+and then extract all in /Rscs/offshores
+... or you can use this bash script to do it automaticly :
+```bash
+chmod +x init_data.sh
+./init_data.sh
+```
+
 ## FUNCTIONALITY
 * StartingTentacle.py downloads the mapping data available for the given company via pappers.fr. It sorts the data and stores it in /Outputs in three files:
   - “SOA_<session>.txt” contains the entire dataset,
