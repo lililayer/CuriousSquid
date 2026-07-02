@@ -13,7 +13,7 @@ Discover the great french fortunes hidden behind the smaller ones
 
 * Several tools are then available: 
   - View the raw data
-  - Search for keywords in the data
+  - Search for keywords in StartingTentacle dataset
   - Check if CuriousSquid finds any related individuals listed on the Forbes website
   - Check if CuriousSquid finds related companies listed on the Fortune website
   - Search for data included in the BODACC database
