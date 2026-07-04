@@ -8,7 +8,7 @@ and more...
 
 
 ## FUNCTIONALITY
-* StartingTentacle.py downloads the mapping data available for the given company via pappers.fr. It sorts the data and stores it in `/Outputs/` in three files:
+* StartingTentacle.py downloads the mapping data available for the given company on pappers.fr. It sorts the data and stores it in `/Outputs/` in three files:
   - `SOA_session.txt` contains the entire dataset,
   - `SOE_session.txt` contains the list of related companies,
   - `SOP_session.txt` contains the list of related individuals.
