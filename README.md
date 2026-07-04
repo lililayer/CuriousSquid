@@ -30,6 +30,12 @@ chmod +x init_data.sh
 ```
 
 ## USAGE
+Start the curious console with `-s` followed by the siren's compagny (9 digits strung together) :
 ```bash
 python3 CuriousSquid.py -s <siren>
+```
+
+You can also execute StartingTentacle with options (you can modify the way CuriousSquid use them in its `main` function) : 
+```bash
+python3 StartingTentacle -s <siren> -o <output file for companies> -p <output file for personalities>
 ```
