@@ -237,8 +237,8 @@ def OffshoresAutoMode(startContent):
 ### APPLICATION FUNCTIONS ###
 
 ### Display Starting Tentacle Data ###
-def F(session_id):
-    os.system(f"gnome-terminal -- less ./Outputs/soa_{session_id}.txt")
+def F(allStartOutputFile):
+    os.system(f"gnome-terminal -- less {allStartOutputFile}")
     return 0
 
 ### Manual search   ###
@@ -338,7 +338,7 @@ def main(s):
             if i == 'e':
                 in_console = False
             if i == 'f':
-                F(session_id)
+                F(allStartOutputFile)
             if i == 'g':
                 G(allStartOutputFile)
             if i == 'b':
