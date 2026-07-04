@@ -35,7 +35,9 @@ Start the curious console with `-s` followed by the siren's compagny (9 digits s
 python3 CuriousSquid.py -s <siren>
 ```
 
-You can also execute StartingTentacle with options (you can modify the way CuriousSquid use them in its `main` function) : 
+You can also execute StartingTentacle with options : 
 ```bash
 python3 StartingTentacle -s <siren> -o <output/file/for/companies.txt> -p <output/file/for/personalities.txt>
 ```
+
+You can modify the way CuriousSquid use them in its `main` function. By default, it stores output files in /Ouputs/
