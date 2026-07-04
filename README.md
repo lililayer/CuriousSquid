@@ -42,4 +42,4 @@ You can also execute StartingTentacle with options :
 python3 StartingTentacle -s <siren> -o <output/file/for/companies.txt> -p <output/file/for/personalities.txt>
 ```
 
-You can modify the way CuriousSquid use StartingTentacle options in its `main` function (by default, it stores output files in `/Ouputs/`).
+You can modify the way CuriousSquid use StartingTentacle options in its `main` function.
