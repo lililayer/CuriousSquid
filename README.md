@@ -37,5 +37,5 @@ python3 CuriousSquid.py -s <siren>
 
 You can also execute StartingTentacle with options (you can modify the way CuriousSquid use them in its `main` function) : 
 ```bash
-python3 StartingTentacle -s <siren> -o <output file for companies> -p <output file for personalities>
+python3 StartingTentacle -s <siren> -o <output/file/for/companies.txt> -p <output/file/for/personalities.txt>
 ```
