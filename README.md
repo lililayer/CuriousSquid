@@ -3,7 +3,9 @@ Compagnie-related, search and analytic OSINT engine
 
 This framework is a work-in-progress, please contact me if you see anything to improve it.
 
-Discover the great french fortunes hidden behind the smaller ones
+Simultaneous filtering on French corporate networks : Fortune 500, Forbes, Offshore Leaks
+and more...
+
 
 ## FUNCTIONALITY
 * StartingTentacle.py downloads the mapping data available for the given company via pappers.fr. It sorts the data and stores it in `/Outputs/` in three files:
