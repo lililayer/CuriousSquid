@@ -6,6 +6,17 @@ This framework is a work-in-progress, please contact me if you see anything to i
 Simultaneous filtering on French corporate networks : Fortune 500, Forbes, Offshore Leaks
 and more...
 
+## DEPENDENCIES
+python librairies :
+- os
+- io
+- pycurl
+- json
+- click
+- requests
+- subprocess
+- random
+- csv
 
 ## FUNCTIONALITY
 * StartingTentacle.py downloads the mapping data available for the given company on pappers.fr. It sorts the data and stores it in `/Outputs/` in three files:
