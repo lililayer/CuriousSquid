@@ -34,7 +34,7 @@ python librairies :
   - Check if certain companies appear in offshore money-laundering company leaks
 
 ## INITIALISATION
-Offshores filter algorythme require public offshores leaks. You can download them on the official website :
+The algorithm for filtering and searching through the leaked offshore company files requires the ICIJ's public dataset. You can download them on the official website :
 
 https://offshoreleaks.icij.org/pages/database
 
