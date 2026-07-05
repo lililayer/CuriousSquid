@@ -10,13 +10,14 @@ and more...
 python librairies :
 - os
 - io
-- pycurl
+- csv
 - json
 - click
+- pycurl
+- random
 - requests
 - subprocess
-- random
-- csv
+
 
 ## FUNCTIONALITY
 * StartingTentacle.py downloads the mapping data available for the given company on pappers.fr. It sorts the data and stores it in `/Outputs/` in three files:
@@ -33,9 +34,12 @@ python librairies :
   - Check if certain companies appear in offshore money-laundering company leaks
 
 ## INITIALISATION
-Offshores filter algorythme require public offshores leaks. You can download them on the official website : 
+Offshores filter algorythme require public offshores leaks. You can download them on the official website :
+
 https://offshoreleaks.icij.org/pages/database
+
 and then extract all in `/Rscs/offshores`
+
 ... or you can use this bash script to do it automaticly :
 ```bash
 chmod +x init_data.sh
