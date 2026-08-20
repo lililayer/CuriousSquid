@@ -1,5 +1,5 @@
 # CuriousSquid
-Compagnie-related, search and analytic OSINT engine
+Compagnie-related OSINT engine
 
 This framework is a work-in-progress, please contact me if you see anything to improve it.
 
