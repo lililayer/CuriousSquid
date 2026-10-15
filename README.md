@@ -35,7 +35,7 @@ python librairies :
   - [i] Find company administrative documents
 
 * The request for the administrative document search tool is customizable :
-``` bash
+```bash
 #!/bin/bash
 
 # modify 'siren=xxxxxxxxx' and 'page=x' in the url below to adapt the script to the targeted compagny and files lists
@@ -83,4 +83,9 @@ You can also execute StartingTentacle with options :
 python3 StartingTentacle -s <siren> -o <output/file/for/companies.txt> -p <output/file/for/personalities.txt>
 ```
 
-You can modify the way CuriousSquid use StartingTentacle options in its `main` function.
+And same for SqdEyes :
+```bash
+python3 SqdEyes -d <path/to/directory> -s <siren>
+```
+
+You can modify the way CuriousSquid use StartingTentacle options in its `main`, and SqdEyes in `I` just above `main`.
