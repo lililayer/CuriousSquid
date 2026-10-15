@@ -1,5 +1,5 @@
 # CuriousSquid
-Compagnie-related OSINT engine
+Compagnie-related OSINT engine based on the pappers API
 
 This framework is a work-in-progress, please contact me if you see anything to improve it.
 
