@@ -40,7 +40,7 @@ python librairies :
 
 # modify 'siren=xxxxxxxxx' and 'page=x' in the url below to adapt the script to the targeted compagny and files lists
 
-curl 'https://api.pappers.ai/v2/recherche-documents?api_token=97a405f1664a83329a7d89ebf51dc227b90633c4ba4a2575&q=&siren=662042449&tri_documents_date_depot_tous=desc&page=1&per_page=10' \
+curl 'https://api.pappers.ai/v2/recherche-documents?api_token=97a405f1664a83329a7d89ebf51dc227b90633c4ba4a2575&q=&siren=xxxxxxxxx&tri_documents_date_depot_tous=desc&page=1&per_page=10' \
   --compressed \
   -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0' \
   -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
