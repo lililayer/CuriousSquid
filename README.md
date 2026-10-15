@@ -34,7 +34,7 @@ python librairies :
   - [l] Check if certain companies appear in offshore money-laundering company leaks
   - [i] Find company administrative documents
 
-* The administrative document search tool is customizable :
+* The request for the administrative document search tool is customizable :
 ``` bash
 #!/bin/bash
 
