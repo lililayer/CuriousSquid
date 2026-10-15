@@ -272,6 +272,7 @@ def T(startContent):
     GetFortuneInfoAll(es)
     return 0
 
+### Offshore
 def L(startContent):
     i = str(input(" Automatic / Manual (A/m) > ")).lower()
     if i == 'm':
@@ -280,9 +281,13 @@ def L(startContent):
         OffshoresAutoMode(startContent)
     return 0
 
+### SqdEyes
+def I(sir):
+    os.system(f"gnome-terminal -- bash -c \"python3 ./SqdEyes/SqdEyes.py -d \"./SqdEyes\" -s {sir}; read -p 'Press <enter> to exit...'\"")
+
 ### APPLICATION MAIN ### 
 
-cmds = 'efgbtsl'
+cmds = 'efgbtsli'
 @click.command()
 @click.option('-s', default="", help='Company\'s siren to investigate (format integer : xxxxxxxxx)')
 def main(s):
@@ -322,9 +327,9 @@ def main(s):
     main_console =  '\033[0m\n\t\033[1;35m[e]\033[0m\033[3;95m Exit'
     main_console += '\033[0m\n\t\033[1;35m[f]\033[0m\033[3;95m Show StartingTentacle infos'
     main_console += '\033[0m\033[0;95m\n\n\tImplemented tools :' + '\033[0m\t\t\033[1;95m|\033[0m\033[0;95m\tStartingTentacle filters :'
-    main_console += '\033[0m\n\t\t\033[1;35m[g]\033[0m\033[3;95m Grep' + '\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[b]\033[0m\033[3;95m Forbes'
-    main_console += '\033[0m\n\t\t\033[1;35m[s]\033[0m\033[3;95m BODACC' + '\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[t]\033[0m\033[3;95m Fortune'
-    main_console += '\033[0m\n\t\t\t\t\t\033[1;95m|\033[0m\t\t\033[1;35m[l]\033[0m\033[3;95m Offshore leaks'
+    main_console += '\033[0m\n\t\t\033[1;35m[g]\033[0m\033[3;95m Grep\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[b]\033[0m\033[3;95m Forbes'
+    main_console += '\033[0m\n\t\t\033[1;35m[s]\033[0m\033[3;95m BODACC\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[t]\033[0m\033[3;95m Fortune'
+    main_console += '\033[0m\n\t\t\033[1;35m[i]\033[0m\033[3;95m SQDEyes\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[l]\033[0m\033[3;95m Offshore leaks'
 
     main_console += '\033[0m\n\033[0;95m > \033[0m\033[4;95m'
     
@@ -349,6 +354,8 @@ def main(s):
                 Bodacc(s)
             if i == 'l':
                 L(startContent)
+            if i == 'i':
+                I(s)
                 
     print("\033[0m Exiting...")
     exit()
