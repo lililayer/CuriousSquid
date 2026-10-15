@@ -80,7 +80,7 @@ python3 CuriousSquid.py -s <siren>
 
 You can also execute StartingTentacle with options : 
 ```bash
-python3 StartingTentacle -s <siren> -o <output/file/for/companies.txt> -p <output/file/for/personalities.txt>
+python3 StartingTentacle -s <siren> -o <path/to/companies.txt> -p <path/to/personalities.txt>
 ```
 
 And same for SqdEyes :
