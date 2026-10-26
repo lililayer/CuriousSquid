@@ -167,8 +167,6 @@ def Bodacc(default_siren):
     c.setopt(c.URL, url)
     http_response_code = None
     b = BytesIO()
-    #headers = []
-    #c.setopt(c.HTTPHEADER, headers)
     c.setopt(c.WRITEDATA, b)
     try:
         c.perform()
@@ -272,7 +270,7 @@ def T(startContent):
     GetFortuneInfoAll(es)
     return 0
 
-### Offshore
+### Offshore ###
 def L(startContent):
     i = str(input(" Automatic / Manual (A/m) > ")).lower()
     if i == 'm':
@@ -281,7 +279,7 @@ def L(startContent):
         OffshoresAutoMode(startContent)
     return 0
 
-### SqdEyes
+### SqdEyes ###
 def I(sir):
     os.system(f"gnome-terminal -- bash -c \"python3 ./SqdEyes/SqdEyes.py -d \"./SqdEyes\" -s {sir}; read -p 'Press <enter> to exit...'\"")
 
@@ -294,16 +292,19 @@ def main(s):
     session_id = random.randrange(0, 100000)
     
     ### GET Start infos ###
-    
     print('\n\033[1;36m INITIALISATION (StartingTentacle.py)...\033[0m')
     
+    # Generate file with StartingTentacle
     startingOutputCompaniesFile = f'./Outputs/soe_{session_id}.txt'
     startingOutputPersonalitiesFile = f'./Outputs/sop_{session_id}.txt'
     result = subprocess.run(['python3', 'StartingTentacle.py', '-s', s, '-o', startingOutputCompaniesFile, '-p', startingOutputPersonalitiesFile], capture_output=True, text=True)
+    
+    # Retrieve StartingTentacle results
     allStartOutputFile = f'./Outputs/soa_{session_id}.txt'
     with open(allStartOutputFile, "w") as file:
         file.write(result.stdout)
-    
+        
+    # Check for StartingTentacle errors
     full_text = ""
     if "An error occurred" in result.stdout: 
         print("\033[1;91m" + result.stdout + "\033[0m")
@@ -312,51 +313,67 @@ def main(s):
     else:
         full_text = result.stdout
     print(result.stderr)
+    
+    # Retrieve StartingTentacle companies data only
     f = open(startingOutputCompaniesFile)
     startContent = f.read()
     f.close()
     
+    # Display my awesome title
     print("\n\033[1;34m ███████╗██╗   ██╗███╗   ██╗ █████╗ ██████╗ ███████╗███████╗    ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗\n ██╔════╝╚██╗ ██╔╝████╗  ██║██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝\n ███████╗ ╚████╔╝ ██╔██╗ ██║███████║██████╔╝███████╗█████╗      ██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   \n ╚════██║  ╚██╔╝  ██║╚██╗██║██╔══██║██╔═══╝ ╚════██║██╔══╝      ██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   \n ███████║   ██║   ██║ ╚████║██║  ██║██║     ███████║███████╗    ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   \n ╚══════╝   ╚═╝   ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚══════╝╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   \033[0m\n")
     
     #####################################################################################################
     #                                            CONSOLE                                                #
     #####################################################################################################
+    # Show version
     global version
     print(f"\n\033[1;36m CURIOUS SQUID {version}\n\033[0m")
+    
+    # Set up console main menu texts
     in_console = True
-    main_console =  '\033[0m\n\t\033[1;35m[e]\033[0m\033[3;95m Exit'
+    main_console =  '\n\033[1;36m MAIN MENU\033[0m\n'
+    main_console += '\033[0m\n\t\033[1;35m[e]\033[0m\033[3;95m Exit'
     main_console += '\033[0m\n\t\033[1;35m[f]\033[0m\033[3;95m Show StartingTentacle infos'
     main_console += '\033[0m\033[0;95m\n\n\tImplemented tools :' + '\033[0m\t\t\033[1;95m|\033[0m\033[0;95m\tStartingTentacle filters :'
     main_console += '\033[0m\n\t\t\033[1;35m[g]\033[0m\033[3;95m Grep\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[b]\033[0m\033[3;95m Forbes'
     main_console += '\033[0m\n\t\t\033[1;35m[s]\033[0m\033[3;95m BODACC\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[t]\033[0m\033[3;95m Fortune'
     main_console += '\033[0m\n\t\t\033[1;35m[i]\033[0m\033[3;95m SQDEyes\033[0m\t\t\033[1;95m|\033[0m\t\t\033[1;35m[l]\033[0m\033[3;95m Offshore leaks'
-
     main_console += '\033[0m\n\033[0;95m > \033[0m\033[4;95m'
     
+    ### Console loop ###
     while in_console:
-        print('\n\033[1;36m MAIN MENU\033[0m')
+        # Get input
         i = str(input(main_console))
         print('\033[0m')
-        if not i in cmds:
+        # Avoid useless inputs
+        if not i in cmds or len(i) != 1:
             print('\033[1;91mBad format !\033[0m')
         else:
+            # exit
             if i == 'e':
                 in_console = False
+            # Show raw data
             if i == 'f':
                 F(allStartOutputFile)
+            # Grep filtering
             if i == 'g':
                 G(allStartOutputFile)
+            # Forbes filtering
             if i == 'b':
                 B(startingOutputPersonalitiesFile)
+            # Fortune filtering
             if i == 't':
                 T(startContent)
+            # Get BODDAC's notifications
             if i == 's':
                 Bodacc(s)
+            # Open offshores leaks filter
             if i == 'l':
                 L(startContent)
+            # Find pappers open documents
             if i == 'i':
                 I(s)
-                
+    # Exits
     print("\033[0m Exiting...")
     exit()
     return
