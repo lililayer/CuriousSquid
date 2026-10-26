@@ -286,7 +286,7 @@ def I(sir):
     os.system(f"gnome-terminal -- bash -c \"python3 ./SqdEyes/SqdEyes.py -d \"./SqdEyes\" -s {sir}; read -p 'Press <enter> to exit...'\"")
 
 ### APPLICATION MAIN ### 
-
+version = "1.6.10-26"
 cmds = 'efgbtsli'
 @click.command()
 @click.option('-s', default="", help='Company\'s siren to investigate (format integer : xxxxxxxxx)')
@@ -321,8 +321,8 @@ def main(s):
     #####################################################################################################
     #                                            CONSOLE                                                #
     #####################################################################################################
-    
-    print("\n\033[1;36m CURIOUS SQUID 1.5.7-04\n\033[0m")
+    global version
+    print(f"\n\033[1;36m CURIOUS SQUID {version}\n\033[0m")
     in_console = True
     main_console =  '\033[0m\n\t\033[1;35m[e]\033[0m\033[3;95m Exit'
     main_console += '\033[0m\n\t\033[1;35m[f]\033[0m\033[3;95m Show StartingTentacle infos'
